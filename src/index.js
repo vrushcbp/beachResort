@@ -3,10 +3,17 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
-
+import { BrowserRouter as Router, Link } from 'react-router-dom'
+import { Route, Switch } from 'react-router-dom'
+import { RoomProvider } from './Context'
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <RoomProvider>
+      <Router>
+        <App />
+      </Router>
+    </RoomProvider>
+
   </React.StrictMode>,
   document.getElementById('root')
 );
